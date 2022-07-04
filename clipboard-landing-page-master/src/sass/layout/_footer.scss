@@ -1,0 +1,91 @@
+.footer {
+	text-align: center;
+	background-color: $footer-color;
+	padding-top: 7rem;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+
+	&__list {
+		list-style: none;
+		color: $btn-font-color;
+		margin-bottom: 5rem;
+
+		&--item {
+			margin-bottom: 2rem;
+			transition: all 0.3s;
+			margin-bottom: 4rem;
+
+			a {
+				text-decoration: none;
+				font-size: 1.8rem;
+				color: $color-seconday-grey;
+
+				&:hover {
+					color: $color-primary-1;
+				}
+			}
+
+			&:hover {
+				transform: scaleX(1.1) skewX(10deg);
+			}
+		}
+
+		@include respond(tab-port) {
+			display: grid;
+			grid-template-columns: auto auto auto;
+			justify-content: center;
+			align-items: center;
+			text-align: left;
+
+			&--item {
+				margin-right: 10rem;
+			}
+		}
+	}
+
+	.attribution {
+		padding: 1rem;
+		letter-spacing: 1.2px;
+
+		a {
+			text-decoration: none;
+			color: $color-primary-1;
+		}
+	}
+
+	&__conatiner {
+		text-align: none;
+
+		@include respond(tab-port) {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 2rem;
+		}
+	}
+
+	@include respond(tab-port) {
+		padding-inline: $section-padding-tab;
+	}
+
+	@include respond(tab-land) {
+		padding-inline: $section-padding-desktop-1;
+	}
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	margin-bottom: 2.5rem;
+
+	img {
+		transition: transform 0.3s;
+
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.3);
+		}
+	}
+}

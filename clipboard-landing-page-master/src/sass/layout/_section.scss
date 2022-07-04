@@ -1,0 +1,94 @@
+main {
+	padding-inline: $section-padding;
+	text-align: center;
+
+	.section {
+		&__img {
+			width: 100%;
+		}
+
+		&__description {
+			.heading {
+				margin-bottom: 2rem;
+			}
+		}
+
+		&--logos {
+			margin-block: 20rem;
+		}
+
+		&--bottom {
+			margin-bottom: 20rem;
+		}
+
+		@include respond(tab-port) {
+			&__img {
+				margin-left: -1.8rem;
+			}
+
+			&__conatiner--1 {
+				margin-top: $padding-top;
+				// background-color: red;
+				padding-inline: 30rem;
+				padding-bottom: 5rem;
+			}
+
+			&__container--2 {
+				display: flex;
+				gap: 8rem;
+				padding-right: $section-padding-desktop;
+			}
+
+			&__container--3 {
+				padding-inline: $section-padding-desktop;
+
+				p {
+					padding-inline: 10rem;
+				}
+			}
+
+			&__description {
+				text-align: left !important;
+				padding-top: $padding-top;
+
+				p {
+					margin-bottom: 4rem !important;
+				}
+			}
+
+			&__activity {
+				display: flex;
+				justify-content: space-between;
+				margin-inline: $section-padding-tab;
+			}
+
+			&--logos {
+				display: flex;
+				justify-content: space-between;
+				margin-inline: $section-padding-tab;
+				margin-block: 8rem;
+			}
+		}
+
+		@include respond(tab-land) {
+			&__activity {
+				margin-inline: $section-padding-desktop-1;
+			}
+
+			&--logos {
+				margin-inline: $section-padding-desktop-1;
+			}
+
+			&--bottom {
+				margin-bottom: 8rem;
+				p {
+					padding-inline: 28rem;
+				}
+			}
+		}
+	}
+
+	@include respond(tab-port) {
+		padding-inline: 0;
+	}
+}

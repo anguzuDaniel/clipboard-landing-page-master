@@ -1,0 +1,68 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		cursor: pointer;
+		padding: $btn-padding;
+		border: none;
+		display: block;
+		border-radius: $btn-radius;
+		transition: all 0.2s;
+		opacity: 1;
+	}
+
+	&--green {
+		background-color: $color-primary-1;
+
+		animation: slideInleft 0.1s ease 0.75s;
+		animation-fill-mode: backwards;
+	}
+
+	&--purple {
+		background-color: $color-primary-2;
+
+		animation: slideInright 0.1s ease 0.75s;
+		animation-fill-mode: backwards;
+	}
+
+	&:hover {
+		transform: scaleX(0.95);
+		filter: brightness(80%);
+		box-shadow: $shadow-1;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+		transform: translateY(-1px);
+	}
+
+	&::after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		border-radius: 10rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all 0.4s;
+	}
+
+	@include respond(tap-port) {
+		background-color: red;
+	}
+}
+
+.buttons-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@include respond(phone) {
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		gap: 15px;
+	}
+}

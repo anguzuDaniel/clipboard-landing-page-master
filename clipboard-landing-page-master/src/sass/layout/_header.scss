@@ -1,0 +1,35 @@
+.header {
+	height: 100vh;
+	padding-inline: $section-padding;
+	text-align: center;
+	background-image: url("../../images/bg-header-mobile.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-items: center;
+	padding-top: 4rem;
+	position: relative;
+	transform: all .2s ease;
+
+	
+	@media only screen and (min-resolution: 192dpi) and (max-width: 37.5em),
+	(-webkit-min-device-pixel-ratio: 2) and (max-width: 37.5em),
+	(max-width: 125em) {
+		background-image: url("../../../images/bg-header-desktop.png");
+	}
+	
+	&__conatiner {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+
+		@include respond(tab-port) {
+			@include centerElment;
+		}
+	}
+
+	h1,
+	p {
+		animation: appear 0.2s ease 0.25s;
+		animation-fill-mode: backwards;
+	}
+}

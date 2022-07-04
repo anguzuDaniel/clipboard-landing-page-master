@@ -1,0 +1,30 @@
+.heading {
+	font-weight: $font-weight;
+	font-size: $heading-sise;
+	color: $heading-color;
+	letter-spacing: 1px;
+
+	&--small {
+		font-size: $heading-size-small;
+		font-weight: bold;
+	}
+}
+
+html {
+	color: $color-seconday-grayish-blue;
+}
+
+.paragragh {
+	font-size: $paragrah-size;
+	letter-spacing: .5px;
+	line-height: 30px;
+}
+
+.btn {
+	font-size: $btn-font-size;
+	font-weight: $font-weight;
+	letter-spacing: 1px;
+	color: $btn-font-color;
+}
+
+
