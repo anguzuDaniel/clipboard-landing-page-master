@@ -35,7 +35,7 @@ body {
 }
 
 html {
-  font-size: 65.5%;
+  font-size: 62.5%;
 }
 
 ::selection {
@@ -304,8 +304,8 @@ main .section--bottom {
     margin-bottom: 4rem !important;
   }
   main .section__activity {
-    display: flex;
-    justify-content: space-between;
+    display: display;
+    grid-template-columns: repeat(auto-fit, minamx(3, 1fr));
     margin-inline: 6rem;
   }
   main .section--logos {
